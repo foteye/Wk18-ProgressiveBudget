@@ -10,18 +10,20 @@ const app = express();
 app.use(logger("dev"));
 
 app.use(compression());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 
 app.use(express.static("public"));
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 mongoose.connect(MONGODB_URI, function (err, res) {
-    if (err) {
-        console.log('ERROR connecting to: ' + MONGODB_URI + '. ' + err);
-    } else {
-        console.log('Succeeded connected to: ' + MONGODB_URI);
-    }
+  if (err) {
+    console.log('ERROR connecting to: ' + MONGODB_URI + '. ' + err);
+  } else {
+    console.log('Succeeded connected to: ' + MONGODB_URI);
+  }
 });
 
 // routes
