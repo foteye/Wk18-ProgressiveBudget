@@ -30,4 +30,7 @@ THEN that will be shown on the page, and added to their transaction history when
 
 ### Lessons Learned:
 
- * 
+ * Going for a surf instead of class can make things SUPER hard
+ * Can definitely see how this makes a website more accessible
+ * Unsure really how to cache content from CDN. Looked up something called foreign fetch but it has been deprectated March 2020
+
